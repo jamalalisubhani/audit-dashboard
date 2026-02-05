@@ -1,0 +1,186 @@
+@use '../../styles/variables' as *;
+
+.sidebar {
+  position: relative;
+  width: 260px;
+  min-width: 260px;
+  background: #1e3a5f;
+  padding: $space-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $space-xl;
+  transition: width 0.25s ease, min-width 0.25s ease;
+  overflow: visible;
+  flex-shrink: 0;
+
+  &[data-collapsed='true'] {
+    width: 72px;
+    min-width: 72px;
+    padding: $space-lg $space-md;
+  }
+}
+
+.brand {
+  margin-bottom: $space-lg;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: $space-sm 0;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+
+  .sidebar[data-collapsed='true'] & {
+    font-size: 1.125rem;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.brandTagline {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: $space-xs;
+  transition: opacity 0.2s;
+
+  .sidebar[data-collapsed='true'] & {
+    display: none;
+  }
+}
+
+.nav {
+  flex: 1;
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  padding: $space-md;
+  border-radius: $radius-md;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+
+  &.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+  }
+
+  .sidebar[data-collapsed='true'] & {
+    justify-content: center;
+    padding: $space-md;
+  }
+}
+
+.navText {
+  .sidebar[data-collapsed='true'] & {
+    display: none;
+  }
+}
+
+.navLinkCollapsed {
+  // Bigger tap target when collapsed; icon size set in TSX
+}
+
+.toggleWrap {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  transform: translate(50%, -50%);
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.toggleButton {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #374151;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s, width 0.2s, height 0.2s;
+
+  &:hover {
+    background: #f3f4f6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.toggleButtonCollapsed {
+  width: 52px;
+  height: 52px;
+}
+
+// Tablet and below: drawer overlay (always expanded when open)
+@media (max-width: $bp-desktop) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    min-width: 260px;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: none;
+
+    &[data-collapsed='true'] {
+      width: 260px;
+      min-width: 260px;
+      padding: $space-lg;
+    }
+
+    &.open {
+      transform: translateX(0);
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .sidebar.open .navText {
+    display: inline;
+  }
+
+  .sidebar.open .brandTagline {
+    display: block;
+  }
+
+  .sidebar.open[data-collapsed='true'] .navText {
+    display: none;
+  }
+
+  .sidebar.open[data-collapsed='true'] .brandTagline {
+    display: none;
+  }
+
+  .toggleWrap {
+    top: 50px;
+  }
+}

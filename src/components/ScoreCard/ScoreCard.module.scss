@@ -1,0 +1,94 @@
+@use '../../styles/variables' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.label {
+  margin-top: $space-md;
+  font-size: 0.875rem;
+  color: $color-text-muted;
+}
+
+.labelBold {
+  margin-top: $space-md;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $color-text;
+}
+
+.rows {
+  margin-top: $space-md;
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  font-size: 0.8125rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rowLabel {
+  color: $color-text-muted;
+}
+
+.rowValue {
+  font-weight: 600;
+  color: $color-danger;
+}
+
+.rowValueSuccess {
+  font-weight: 600;
+  color: $color-success;
+}
+
+/* Metrics layout: value on top, label below, side by side */
+.metricsGrid {
+  margin-top: $space-lg;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: $space-xl;
+  flex-wrap: wrap;
+}
+
+.metricBlock {
+  text-align: center;
+  min-width: 80px;
+}
+
+.metricValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $color-text;
+  line-height: 1.2;
+  margin-bottom: $space-xs;
+}
+
+.metricValueSuccess {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $color-success;
+  line-height: 1.2;
+  margin-bottom: $space-xs;
+}
+
+.metricLabel {
+  font-size: 0.8125rem;
+  color: $color-text-muted;
+  line-height: 1.3;
+}

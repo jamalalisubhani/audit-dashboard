@@ -1,0 +1,17 @@
+@use '../../styles/variables' as *;
+
+.card {
+  background: $color-bg-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: $space-md $space-lg $space-lg $space-md;
+}
+
+.cardSm {
+  border-radius: $radius-md;
+  padding: $space-md;
+}
+
+.card + .card {
+  margin-top: $space-lg;
+}

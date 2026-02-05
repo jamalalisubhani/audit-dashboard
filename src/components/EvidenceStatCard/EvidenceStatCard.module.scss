@@ -1,0 +1,24 @@
+@use '../../styles/variables' as *;
+
+.card {
+  background: $color-bg-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: $space-md;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $color-text;
+  line-height: 1.2;
+}
+
+.label {
+  font-size: 0.8125rem;
+  color: $color-text-muted;
+  margin-top: $space-xs;
+}

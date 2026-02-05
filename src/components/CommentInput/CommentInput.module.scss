@@ -1,0 +1,28 @@
+@use '../../styles/variables' as *;
+
+.textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  font-size: 0.875rem;
+  color: $color-text;
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 12px;
+}
+
+.button {
+  background: $color-primary;
+  color: #ffffff;
+  border: none;
+  border-radius: $radius-md;
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+}

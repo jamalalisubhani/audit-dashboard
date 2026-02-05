@@ -1,0 +1,116 @@
+@use '../../styles/variables' as *;
+
+.section {
+  margin-bottom: 32px;
+}
+
+.card {
+  padding: $space-lg;
+}
+
+.headerRow {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-lg;
+  margin-bottom: $space-lg;
+  padding-bottom: $space-md;
+  border-bottom: 1px solid $color-border;
+
+  > *:first-child {
+    margin-bottom: 0;
+  }
+}
+
+.legend {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  margin-left: $space-lg;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  font-size: 0.8125rem;
+}
+
+.legendDot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.header {
+  background: $color-title;
+  color: #ffffff;
+  padding: 10px 8px;
+  border-radius: $radius-md $radius-md 0 0;
+  margin-bottom: $space-sm;
+}
+
+.headerName {
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  line-height: 1.2;
+}
+
+.headerProgress {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.subSections {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.subCard {
+  background: $color-bg-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: $space-sm;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.subName {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: $color-text;
+  margin-bottom: 2px;
+  line-height: 1.3;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  align-items: center;
+}

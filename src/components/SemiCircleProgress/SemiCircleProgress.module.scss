@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+
+.wrapper {
+  position: relative;
+  width: var(--size);
+  height: calc(var(--size) / 2 + var(--stroke-width) / 2);
+  margin: 0 auto;
+}
+
+.svg {
+  display: block;
+  overflow: visible;
+}
+
+.progressPath {
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.label {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}

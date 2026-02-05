@@ -1,0 +1,32 @@
+@use '../../styles/variables' as *;
+
+.item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $color-danger;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+}
+
+.action {
+  font-size: 0.875rem;
+  color: $color-text;
+  margin-bottom: $space-xs;
+  line-height: 1.5;
+}
+
+.time {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}

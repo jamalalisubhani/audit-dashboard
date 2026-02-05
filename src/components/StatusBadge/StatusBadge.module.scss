@@ -1,0 +1,29 @@
+@use '../../styles/variables' as *;
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  white-space: nowrap;
+
+  &.approved {
+    background: rgba(5, 150, 105, 0.15);
+    color: $color-success;
+  }
+
+  &.pending {
+    background: rgba(234, 179, 8, 0.15);
+    color: $color-warning;
+  }
+
+  &.rejected {
+    background: rgba(220, 38, 38, 0.15);
+    color: $color-danger;
+  }
+
+  &.draft {
+    background: rgba(100, 116, 139, 0.15);
+    color: $color-text-muted;
+  }
+}

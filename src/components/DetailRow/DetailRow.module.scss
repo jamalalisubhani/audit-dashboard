@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+
+.row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: $space-md;
+  border-radius: $radius-md;
+  overflow: hidden;
+}
+
+.cell {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  background: #f1f5f9;
+  padding: $space-md;
+  border-radius: $radius-md;
+
+  &.label {
+    font-weight: 600;
+    color: $color-text;
+    line-height: 1.5;
+  }
+
+  &.value {
+    color: $color-text;
+  }
+}
+
+.itemSpacing > * + * {
+  margin-top: 12px;
+}

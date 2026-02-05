@@ -1,0 +1,89 @@
+@use '../styles/variables' as *;
+
+.page {
+  padding: $space-lg;
+  background-color: $color-bg;
+}
+
+.summarySection {
+  margin-bottom: 32px;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: $space-md;
+}
+
+.threeCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: $space-lg;
+  margin-bottom: 32px;
+  align-items: stretch;
+}
+
+.cardColumn {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+
+  > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: $space-lg;
+  align-items: stretch;
+}
+
+@media (max-width: $bp-desktop) {
+  .summaryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .threeCol {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: $bp-tablet) {
+  .page {
+    padding: $space-md;
+  }
+
+  .summaryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-sm;
+  }
+
+  .threeCol {
+    grid-template-columns: 1fr;
+    gap: $space-md;
+    margin-bottom: $space-xl;
+  }
+
+  .twoCol {
+    gap: $space-md;
+  }
+}
+
+@media (max-width: $bp-mobile) {
+  .page {
+    padding: $space-sm;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+}

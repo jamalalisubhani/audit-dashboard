@@ -1,0 +1,28 @@
+@use '../../styles/variables' as *;
+
+.tabs {
+  display: inline-flex;
+  background: #f1f5f9;
+  border-radius: $radius-md;
+  padding: $space-xs;
+  gap: $space-xs;
+}
+
+.tab {
+  padding: 10px 20px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  border-radius: $radius-sm;
+  color: $color-text-muted;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+
+  &.active {
+    background: $color-bg-card;
+    color: $color-text;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+}

@@ -1,0 +1,28 @@
+// Use design tokens from :root in index.css
+// This file can re-export or alias for SCSS usage
+$color-bg: #f8fafc;
+$color-bg-card: #ffffff;
+$color-border: #e2e8f0;
+$color-text: #0f172a;
+$color-text-muted: #64748b;
+$color-primary: #2563eb;
+$color-success: #059669;
+$color-warning: #ca8a04;
+$color-warning-orange: #f59e0b;
+$color-danger: #dc2626;
+$color-title: #1e3a5f;
+$color-slate: #94a3b8;
+$color-blue-light: #60a5fa;
+$radius-sm: 6px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 32px;
+
+// Breakpoints (desktop-first: use max-width in media queries)
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;

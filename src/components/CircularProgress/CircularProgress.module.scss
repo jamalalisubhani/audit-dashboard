@@ -1,0 +1,32 @@
+@use '../../styles/variables' as *;
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg {
+  transform: rotate(-90deg);
+}
+
+.progressCircle {
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: $color-text;
+  line-height: 1.2;
+}
